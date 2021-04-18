@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
-const webpack = require("webpack");
+// const webpack = require("webpack");
 
 module.exports = {
   entry: {
@@ -8,9 +8,9 @@ module.exports = {
     //libs: ["lodash"],
   },
   output: {
-    filename: "[name].[hash:8].js",
+    filename: "[name].[fullhash:8].js",
     path: path.resolve(__dirname, "dist"),
-    assetModuleFilename: 'img/[hash][ext][query]'
+    assetModuleFilename: 'img/[fullhash][ext][query]'
   },
   module: {
     rules: [
